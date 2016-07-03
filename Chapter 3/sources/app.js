@@ -38,7 +38,7 @@ app.get('/contacts', (req, res) => {
 		}
 );
 
-app.get('/contacts/:number', function(req, res) {
+app.get('/contacts/:number', (req, res) => {
 	res.format({
 		'application/json': () => {
 			res.end(JSON.stringify(contacts.query(req.params.number)));
@@ -66,7 +66,7 @@ app.get('/groups', (req, res) => {
 	});
 });
 
-app.get('/groups/:name', function(req, res) {
+app.get('/groups/:name', (req, res) => {
 	var name = req.params.name;
 	res.format({
 		'application/json': () => {

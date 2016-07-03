@@ -19,8 +19,7 @@ exports.listXml = () => {
   return js2xmlparser('rs', resObj);
 }
 
-exports.query = function(number)
-{
+exports.query = (number) => {
   var json = read_json_file();
   var json_result = JSON.parse(json);
   var result = json_result.result;
@@ -45,8 +44,7 @@ exports.queryXml = (number) => {
   return js2xmlparser('rs', obj);
 }
 
-exports.query_by_arg = function(arg, value)
-{
+exports.query_by_arg = (arg, value) => {
   var json = read_json_file();
   var json_result = JSON.parse(json);
   var result = json_result.result;
@@ -72,8 +70,7 @@ exports.queryByArgXml = (arg, value) => {
   return js2xmlparser('rs', obj);
 }
 
-exports.list_groups = function()
-{
+exports.list_groups = () => {
   var json = read_json_file();
   var json_result = JSON.parse(json);
   var result = json_result.result;
@@ -101,8 +98,7 @@ exports.listGroupXml = () => {
   return js2xmlparser('groups', {group: obj});
 }
 
-exports.get_members = function(group_name)
-{
+exports.get_members = (group_name) => {
   var json = read_json_file();
   var json_result = JSON.parse(json);
   var result = json_result.result;
