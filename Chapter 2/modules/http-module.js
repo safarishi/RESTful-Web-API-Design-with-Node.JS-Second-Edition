@@ -23,7 +23,8 @@ function handle_HEAD_request(request, response) {
 	response.writeHead(200, {
 		'Content-Type' : 'text/plain'
 	});
-	response.end('Head action was request');
+	console.log('HEAD action was request');
+	response.end();
 }
 
 function handle_DELETE_request(request, response) {
